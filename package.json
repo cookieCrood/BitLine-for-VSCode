@@ -1,0 +1,25 @@
+{
+  "name": "bitline",
+  "displayName": "BitLine",
+  "description": "Extension for the BitLine programming language.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "bitline",
+      "aliases": ["BitLine", "bitline"],
+      "extensions": [".bit"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "bitline",
+      "scopeName": "source.bitline",
+      "path": "./syntaxes/bitline.tmLanguage.json"
+    }]
+  }
+}
