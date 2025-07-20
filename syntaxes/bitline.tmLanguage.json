@@ -11,10 +11,36 @@
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.bitline",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+			"patterns": [
+				{
+      				"match": "\\b(BOX)\\b",
+					"name": "keyword.control.bitline"
+				},
+				{
+					"match": "<<|>>",
+					"name": "keyword.operator.bitline"
+				},
+				{
+					"match": "\\b(NAND)\\b",
+					"name": "support.function.bitline"
+				},
+				{
+					"match": "<<|>>|:|;|\\(|\\)|\\{|\\}|,",
+					"name": "punctuation.separator.bitline"
+				},
+				{
+					"match": "\\b(bit)\\b",
+					"name": "storage.type.bitline"
+				},
+				{
+					"match": "\\b[01]\\b",
+					"name": "constant.numeric.binary.bitline"
+				},
+				{
+					"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
+					"name": "variable.other.bitline"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.bitline",

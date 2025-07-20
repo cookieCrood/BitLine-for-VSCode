@@ -1,25 +1,54 @@
 {
   "name": "bitline",
   "displayName": "BitLine",
-  "description": "Extension for the BitLine programming language.",
+  "description": "Syntax highlighting and language support for the BitLine hardware description language.",
   "version": "0.0.1",
+  "publisher": "your-publisher-name",
   "engines": {
-    "vscode": "^1.102.0"
+    "vscode": "^1.70.0"
   },
   "categories": [
     "Programming Languages"
   ],
+  "keywords": [
+    "bitline",
+    "hardware",
+    "hdl",
+    "syntax",
+    "language"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/bitline.git"
+  },
+  "homepage": "https://github.com/your-username/bitline",
+  "bugs": {
+    "url": "https://github.com/your-username/bitline/issues"
+  },
+  "license": "MIT",
+  "readme": "README.md",
   "contributes": {
-    "languages": [{
-      "id": "bitline",
-      "aliases": ["BitLine", "bitline"],
-      "extensions": [".bit"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "bitline",
-      "scopeName": "source.bitline",
-      "path": "./syntaxes/bitline.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "bitline",
+        "aliases": ["BitLine", "bitline"],
+        "extensions": [".bit"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "bitline",
+        "scopeName": "source.bitline",
+        "path": "./syntaxes/bitline.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "echo \"No compilation needed\""
+  },
+  "devDependencies": {
+    "typescript": "^4.0.0"
   }
 }
